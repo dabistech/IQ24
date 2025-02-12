@@ -1,0 +1,77 @@
+[tool.poetry]
+name = "IQ24.ai"
+version = "0.1.0"
+description = "An AI-powered B2B prospecting and outreach platform that automates lead generation, validation, personalization, and campaign execution."
+authors = ["Alieu Jagne <alieu@ai24.ai>"]
+readme = "README.md"
+license = "MIT"
+repository = "https://github.com/dabistech/IQ24.ai"
+keywords = ["AI", "prospecting", "outreach", "automation", "lead-generation"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.9",
+    "Topic :: Software Development :: Libraries :: Application Frameworks"
+]
+
+packages = [
+    { include = "src", from = "." }
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.31.0"  # For API calls (LinkedIn, Hunter.io, etc.)
+langchain = "0.3.0"  # For agent-based workflows
+langchain-openai = "0.3"  # For OpenAI integration
+langchain-groq = "0.2.3"  # For Groq integration (DeepSeek R1)
+transformers = "^4.36.0"  # For NLP models like GPT-2, groqor DeepSeek R1
+pandas = "^2.1.0"  # For data manipulation
+numpy = "^1.24.0"  # For numerical operations
+python-dotenv = "1.0.0"  # For environment variable management
+rich = "^13.9.4"  # For rich console output
+questionary = "^2.1.0"  # For interactive prompts
+tabulate = "^0.9.0"  # For tabular data display
+matplotlib = "^3.9.2"  # For visualizations (e.g., campaign performance)
+colorama = "^0.4.6"  # For colored console output
+
+# CRM and communication tools
+sendgrid = "^6.11.0"  # For email campaigns
+twilio = "^8.1.0"  # For SMS and WhatsApp campaigns
+hubspot-api-client = "^5.0.0"  # For HubSpot CRM integration
+salesforce-api = "^1.0.0"  # For Salesforce CRM integration
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"  # For unit and integration testing
+black = "^23.7.0"  # For code formatting
+isort = "^5.12.0"  # For import sorting
+flake8 = "^6.1.0"  # For linting
+pytest-cov = "^4.1.0"  # For test coverage reporting
+mypy = "^1.7.0"  # For static type checking
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120  # Adjust line length for readability
+target-version = ['py39']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"  # Align isort with Black formatting
+line_length = 120
+
+[tool.pytest.ini_options]
+addopts = "--cov=src --cov-report=term-missing"  # Enable test coverage reporting
+testpaths = ["tests"]  # Specify test directory
+
+[tool.flake8]
+max-line-length = 120
+exclude = [
+    ".git",
+    "__pycache__",
+    "venv",
+    "dist",
+    "build"
+]
