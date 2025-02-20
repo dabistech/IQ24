@@ -1,4 +1,4 @@
-![IQ24](/assets/images/tux.png)
+![IQ24](/assets/images/iq24-banner.png)
 
 # **IQ24.ai**
 
@@ -125,6 +125,7 @@ IQ24.ai/
 │   │   ├── prospect_discovery.py # Prospect Discovery Agent (PDA)
 │   │   ├── validation_agent.py   # Validation & Enrichment Agent (VEA)
 │   │   ├── outreach_agent.py     # Outreach Personalization Agent (OPA)
+│   │   ├── outreach_engagement.py     # Outreach Engagement Agent (OEA)
 │   │   ├── campaign_executor.py  # Campaign Execution Agent (CEA)
 │   │   ├── analytics_agent.py    # Analytics & Feedback Loop Agent (AFLA)
 │   │   ├── compliance_agent.py   # Compliance Guardian Network (CGN)
