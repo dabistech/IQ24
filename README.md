@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ![IQ24](/assets/images/iq24-banner.png)
+=======
+![IQ24](/assets/images/iq24.png)
+>>>>>>> origin/main
 
 # **IQ24.ai**
 
