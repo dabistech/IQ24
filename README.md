@@ -1,4 +1,4 @@
-![IQ24](/assets/images/tux.png)
+![IQ24](/assets/images/iq24.png)
 
 # **IQ24.ai**
 
